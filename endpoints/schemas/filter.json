@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "http://localhost:9999/endpoints/schemas/filter.json",
+  "title": "Filter definitions",
+  "definitions": {
+    "filter": {
+      "id": "filter",
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "and": {
+              "type": "array",
+              "items": { "$ref": "#filter" },
+              "minItems": 1
+            }
+          },
+          "required": ["and"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "or": {
+              "type": "array",
+              "items": { "$ref": "#filter" },
+              "minItems": 1
+            }
+          },
+          "required": ["or"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "not": { "$ref": "#filter" }
+          },
+          "required": ["not"],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "filter": {
+              "type": "string"
+            }
+          },
+          "required": ["field", "filter"],
+          "additionalProperties": false
+        }
+      ]
+    }
+  }
+}
