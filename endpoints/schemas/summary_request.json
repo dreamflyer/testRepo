@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "http://localhost:9999/endpoints/schemas/summary_request.json",
+  "id": "https://raw.githubusercontent.com/dreamflyer/testRepo/master/endpoints/schemas/summary_request.json",
   "type": "object",
   "properties": {
     "interval": {
