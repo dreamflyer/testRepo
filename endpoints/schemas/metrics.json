@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "http://localhost:9999/endpoints/schemas/metrics.json",
+  "title": "Filter definitions",
+  "definitions": {
+    "metrics": {
+      "id": "metrics",
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string",
+            "pattern": "^(sum|min|max|avg)_[a-z_]+$"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "field": {
+                "type": "string",
+                "pattern": "^hist_[a-z_]+$"
+              },
+              "quantile": {
+                "type": "number",
+                "minimum": 0.0,
+                "maximum": 1.0
+              }
+            },
+            "required": ["name", "field", "quantile"]
+          }
+        ]
+      },
+      "minItems": 1
+    }
+  }
+}

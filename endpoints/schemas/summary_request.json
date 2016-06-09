@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "http://localhost:9999/endpoints/schemas/summary_request.json",
+  "type": "object",
+  "properties": {
+    "interval": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "timezone": {
+      "type": "string",
+      "pattern": "^(UTC|(Africa|America|Antarctica|Arctic|Asia|Atlantic|Australia|Etc|Europe|Indian|Pacific)/[A-Za-z]+(_[A-Za-z]+)?)$"
+    },
+    "metrics": { "$ref": "http://localhost:9999/endpoints/schemas/metrics.json#metrics" },
+    "filter": { "$ref": "http://localhost:9999/endpoints/schemas/filter.json#filter" },
+    "group_by": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": ["interval", "metrics"]
+}
