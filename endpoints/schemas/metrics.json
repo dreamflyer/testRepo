@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "http://localhost:9999/endpoints/schemas/metrics.json",
+  "id": "https://raw.githubusercontent.com/dreamflyer/testRepo/master/endpoints/schemas/metrics.json",
   "title": "Filter definitions",
   "definitions": {
     "metrics": {
