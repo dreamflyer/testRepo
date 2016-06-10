@@ -15,8 +15,8 @@
       "type": "string",
       "pattern": "^(UTC|(Africa|America|Antarctica|Arctic|Asia|Atlantic|Australia|Etc|Europe|Indian|Pacific)/[A-Za-z]+(_[A-Za-z]+)?)$"
     },
-    "metrics": { "$ref": "http://localhost:9999/endpoints/schemas/metrics.json#metrics" },
-    "filter": { "$ref": "http://localhost:9999/endpoints/schemas/filter.json#filter" },
+    "metrics": { "$ref": "https://raw.githubusercontent.com/dreamflyer/testRepo/master/endpoints/schemas/metrics.json#metrics" },
+    "filter": { "$ref": "https://raw.githubusercontent.com/dreamflyer/testRepo/master/endpoints/schemas/filter.json#filter" },
     "group_by": {
       "type": "array",
       "items": {
