@@ -1,16 +1,12 @@
-{
-  "$schema": "http://json-schema.org/schema",
+{   "$schema":                    "http://json-schema.org/schema",
   "id": "https://raw.githubusercontent.com/dreamflyer/testRepo/master/endpoints/schemas/filter.json",
   "title": "Filter definitions",
   "definitions": {
     "filter": {
-      "id": "filter",
+                                  "id": "filter",
       "oneOf": [
         {
-          "type": "object",
-          "properties": {
-            "and": {
-              "type": "array",
+          "type": "object", "properties": {  "and": { "type": "array",
               "items": { "$ref": "#filter" },
               "minItems": 1
             }
